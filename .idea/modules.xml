@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AppDiProva2.iml" filepath="$PROJECT_DIR$/AppDiProva2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjectLime/app.iml" filepath="$PROJECT_DIR$/ProjectLime/app.iml" />
+    </modules>
+  </component>
+</project>
