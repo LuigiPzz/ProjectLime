@@ -4,14 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.appdiprova.ConsoleActivity">
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    tools:context="com.example.appdiprova.OwnerConsoleActivity">
 
 
     <ListView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/listviewConsole"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:divider="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 </android.support.constraint.ConstraintLayout>
