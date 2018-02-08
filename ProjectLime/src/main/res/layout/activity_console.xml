@@ -12,22 +12,13 @@
 
 
     <ListView
-        android:id="@+id/listviewOwnerConsole"
+        android:id="@+id/listviewConsole"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
-        android:clickable="true"
-        android:focusable="false"
         android:divider="#FFFFFF"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/bt_OwnerConsole"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button2"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 </android.support.constraint.ConstraintLayout>

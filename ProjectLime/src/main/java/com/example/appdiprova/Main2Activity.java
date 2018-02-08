@@ -14,7 +14,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
 
-        Button bt = (Button) findViewById(R.id.bt_console);
+        Button bt = findViewById(R.id.bt_console);
 
         //registra la callback dell'evento del click (codice eseguito al click)
         bt.setOnClickListener(
