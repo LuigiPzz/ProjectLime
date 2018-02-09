@@ -3,31 +3,32 @@
 android:id="@+id/content_main"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:paddingBottom="@dimen/activity_vertical_margin"
-android:paddingLeft="@dimen/activity_horizontal_margin"
-android:paddingRight="@dimen/activity_horizontal_margin"
-android:paddingTop="@dimen/activity_vertical_margin"
 android:orientation="vertical">
+
 <SurfaceView
     android:layout_width="match_parent"
     android:layout_height="400dp"
     android:id="@+id/surface_view"
     />
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:textSize="20dp"
-    android:textStyle="bold"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
-    android:background="#BBDEFB"
-    android:hint="Inquadra un codice a barre o QR"
-    android:id="@+id/barcode_text"/>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Pulisci campo"
-    android:onClick="cleanTextView"/>
+
+    <TextView
+        android:id="@+id/barcode_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B2DFDB"
+        android:gravity="center_horizontal"
+        android:hint="Inquadra un codice a barre o QR"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:onClick="cleanTextView"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:text="Clean" />
 
 </LinearLayout>

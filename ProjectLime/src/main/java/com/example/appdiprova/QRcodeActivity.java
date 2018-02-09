@@ -1,9 +1,11 @@
 package com.example.appdiprova;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -78,14 +80,18 @@ public class QRcodeActivity extends AppCompatActivity {
             @Override
             public void receiveDetections(Detector.Detections<Barcode> detections) {
                 final SparseArray<Barcode> items = detections.getDetectedItems();
+                final Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-                if (items.size() != 0)
+
+                if (items.size() != 0) {
                     runOnUiThread(new Runnable() {
                         public void run() {
-                            String barcode="Rilevato: "+items.valueAt(0).displayValue;
+                            String barcode =/*"Rilevato: "+*/items.valueAt(0).displayValue;
                             message.setText(barcode);
+                            vib.vibrate(100);
                         }
                     });
+                }
 
             }
         });
