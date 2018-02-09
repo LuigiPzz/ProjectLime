@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.appdiprova">
 
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="barcode" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,9 +27,9 @@
             android:name=".Main3Activity"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".OwnerConsoleActivity"/>
-        <activity android:name=".ConsoleActivity"/>
-
+        <activity android:name=".OwnerConsoleActivity" />
+        <activity android:name=".ConsoleActivity" />
+        <activity android:name=".QRcodeActivity"></activity>
     </application>
 
 </manifest>

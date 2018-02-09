@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AppDiProva2.iml" filepath="$PROJECT_DIR$/AppDiProva2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ProjectLime/app.iml" filepath="$PROJECT_DIR$/ProjectLime/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjectLime.iml" filepath="$PROJECT_DIR$/ProjectLime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjectLime/ProjectLime-ProjectLime.iml" filepath="$PROJECT_DIR$/ProjectLime/ProjectLime-ProjectLime.iml" />
     </modules>
   </component>
 </project>
