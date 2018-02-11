@@ -36,7 +36,7 @@ public class QRcodeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrcode);
         surfaceView = (SurfaceView) findViewById(R.id.surface_view);
-        message = (TextView) findViewById(R.id.barcode_text);
+        message = findViewById(R.id.barcode_text);
 
         // chiediamo di individuare QR code e EAN 13
         detector = new BarcodeDetector.Builder(getApplicationContext())
@@ -88,6 +88,7 @@ public class QRcodeActivity extends AppCompatActivity {
                         public void run() {
                             String barcode =/*"Rilevato: "+*/items.valueAt(0).displayValue;
                             message.setText(barcode);
+                            assert vib != null; //test
                             vib.vibrate(100);
                         }
                     });
@@ -126,7 +127,7 @@ public class QRcodeActivity extends AppCompatActivity {
 
                     exit("Negata la Permission di accesso alla fotocamera");
                 }
-                return;
+                // test-remove return;
             }
         }
     }
