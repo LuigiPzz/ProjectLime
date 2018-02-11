@@ -40,7 +40,7 @@ public class QRcodeActivity extends AppCompatActivity {
 
         // chiediamo di individuare QR code e EAN 13
         detector = new BarcodeDetector.Builder(getApplicationContext())
-                .setBarcodeFormats(Barcode.QR_CODE | Barcode.EAN_13)
+                .setBarcodeFormats(Barcode.QR_CODE | Barcode.EAN_13 | Barcode.EAN_8)
                 .build();
 
         // verifichiamo che BarcodeDetector sia operativo
