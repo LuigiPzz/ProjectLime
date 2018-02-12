@@ -71,7 +71,6 @@ public class PrimaActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super. onOptionsItemSelected(item);
     }
 
@@ -94,7 +93,8 @@ public class PrimaActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_backup) {
-
+            Intent ac = new Intent(getApplicationContext(), OwnerConsoleActivity.class);
+            startActivity(ac);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
