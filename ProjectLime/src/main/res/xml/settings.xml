@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Sezione 1">
+        <CheckBoxPreference
+            android:title="Impostazione 1"
+            android:defaultValue="false"
+            android:summary="Si o No"
+            android:key="checkboxPref" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Sezione 2">
+        <EditTextPreference
+            android:summary="Inserire un testo"
+            android:defaultValue="a"
+            android:title="Testo"
+            android:key="editTextPref" />
+        <RingtonePreference
+            android:summary="Seleziona una suoneria"
+            android:title="Suonerie"
+            android:key="suoneriePref" />
+    </PreferenceCategory>
+</PreferenceScreen>
