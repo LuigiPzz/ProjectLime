@@ -9,6 +9,7 @@ import android.os.Vibrator;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -20,6 +21,7 @@ import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
+import java.util.function.BinaryOperator;
 
 public class QRcodeActivity extends AppCompatActivity {
 
@@ -79,9 +81,10 @@ public class QRcodeActivity extends AppCompatActivity {
 
             @Override
             public void receiveDetections(Detector.Detections<Barcode> detections) {
-                final SparseArray<Barcode> items = detections.getDetectedItems();
                 final Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
+                final SparseArray<Barcode> items;
+                items = detections.getDetectedItems();
 
                 if (items.size() != 0) {
                     runOnUiThread(new Runnable() {
@@ -90,6 +93,7 @@ public class QRcodeActivity extends AppCompatActivity {
                             message.setText(barcode);
                             assert vib != null; //test
                             vib.vibrate(100);
+                            return;
                         }
                     });
                 }

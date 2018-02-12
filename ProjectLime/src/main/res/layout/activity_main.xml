@@ -10,11 +10,11 @@
 
 
     <Button
-        android:id="@+id/pulsante1"
+        android:id="@+id/bt_accedi"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:background="@drawable/shape"
-        android:text="Accedi"
+        android:text="@string/accedi"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
