@@ -9,5 +9,12 @@
 
     <string name="action_settings">Settings</string>
     <string name="accedi">Accedi</string>
+
+
+
+    <string name="logosony">LogoSony</string>
+    <string name="logomicrosoft">LogoMicrosoft</string>
     <string name="logonintendo">LogoNintendo</string>
+    <string name="logosega">LogoSega</string>
+    <string name="logoatari">LogoAtari</string>
 </resources>
