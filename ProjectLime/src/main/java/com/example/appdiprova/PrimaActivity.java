@@ -93,7 +93,7 @@ public class PrimaActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_backup) {
-            Intent ac = new Intent(getApplicationContext(), OwnerConsoleActivity.class);
+            Intent ac = new Intent(getApplicationContext(), BrandConsole.class);
             startActivity(ac);
         }
 

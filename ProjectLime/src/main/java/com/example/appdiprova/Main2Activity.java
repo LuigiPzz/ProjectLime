@@ -21,7 +21,7 @@ public class Main2Activity extends AppCompatActivity {
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View v){
-                        Intent ac = new Intent(getApplicationContext(), OwnerConsoleActivity.class);
+                        Intent ac = new Intent(getApplicationContext(),QRcodeActivity.class);
                         startActivity(ac);
                     }
                 }

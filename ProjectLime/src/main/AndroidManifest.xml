@@ -7,7 +7,7 @@
         android:value="barcode" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -28,14 +28,14 @@
             android:name=".PrimaActivity"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".OwnerConsoleActivity" />
         <activity android:name=".ConsoleActivity" />
-        <activity android:name=".QRcodeActivity"
-                  android:label="@string/title_activity_qrcode">
-        </activity>
-        <activity android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings">
-        </activity>
+        <activity
+            android:name=".QRcodeActivity"
+            android:label="@string/title_activity_qrcode"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+        <activity android:name=".BrandConsole"></activity>
     </application>
 
 </manifest>
