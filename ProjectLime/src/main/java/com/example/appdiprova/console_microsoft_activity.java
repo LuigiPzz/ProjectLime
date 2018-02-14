@@ -8,6 +8,6 @@ public class console_microsoft_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_console_microsoft_activity);
+        setContentView(R.layout.activity_console_microsoft);
     }
 }

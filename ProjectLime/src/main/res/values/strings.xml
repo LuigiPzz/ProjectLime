@@ -3,6 +3,8 @@
     <string name="title_activity_main3">Pagina Principale</string>
     <string name="title_activity_qrcode">QR Code Scan</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_console_brand">Console Brand</string>
+    <string name="title_activity_console_microsoft">Microsoft Console</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -20,4 +22,10 @@
     <string name="logoxbox1">LogoXbox1</string>
     <string name="logoxbox360">LogoXbox360</string>
     <string name="logoxboxOne">LogoXboxOne</string>
+    <string name="logoplaystation1">LogoPlaystation1</string>
+    <string name="logoplaystation2">LogoPlaystation2</string>
+    <string name="logoplaystation3">LogoPlaystation3</string>
+    <string name="logoplaystation4">LogoPlaystation4</string>
+    <string name="logopsp">LogoPSP</string>
+    <string name="logopsv">LogoPSV</string>
 </resources>

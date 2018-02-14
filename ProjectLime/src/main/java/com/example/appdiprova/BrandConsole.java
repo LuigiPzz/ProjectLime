@@ -11,7 +11,7 @@ public class BrandConsole extends AppCompatActivity {
 
     View.OnClickListener getImageBtnOnClick = new View.OnClickListener() {
         public void onClick(View view) {
-            Intent ac = new Intent(getApplicationContext(), QRcodeActivity.class);
+            Intent ac = new Intent(getApplicationContext(), console_microsoft_activity.class);
             startActivity(ac);
 
         }
