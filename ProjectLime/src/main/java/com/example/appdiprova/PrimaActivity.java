@@ -84,7 +84,7 @@ public class PrimaActivity extends AppCompatActivity
             Intent ac = new Intent(getApplicationContext(), QRcodeActivity.class);
             startActivity(ac);
         } else if (id == R.id.nav_gallery) {
-            Intent ac = new Intent(getApplicationContext(), console_microsoft_activity.class);
+            Intent ac = new Intent(getApplicationContext(), ConsoleSonyActivity.class);
             startActivity(ac);
         } else if (id == R.id.nav_slideshow) {
 
@@ -96,7 +96,7 @@ public class PrimaActivity extends AppCompatActivity
         } else if (id == R.id.nav_backup) {
 
         } else if (id == R.id.nav_gamepad) {
-            Intent ac = new Intent(getApplicationContext(), BrandConsole.class);
+            Intent ac = new Intent(getApplicationContext(), BrandConsoleActivity.class);
             startActivity(ac);
      }
 

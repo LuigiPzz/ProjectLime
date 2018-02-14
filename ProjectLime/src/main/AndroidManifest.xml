@@ -35,10 +35,15 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".BrandConsole"
-            android:label="@string/title_activity_console_brand"/>
-        <activity android:name=".console_microsoft_activity"
-            android:label="@string/title_activity_console_microsoft"/>
+        <activity
+            android:name=".BrandConsoleActivity"
+            android:label="@string/title_activity_console_brand" />
+        <activity
+            android:name=".ConsoleMicrosoftActivity"
+            android:label="@string/title_activity_console_microsoft" />
+        <activity
+            android:name=".ConsoleSonyActivity"
+            android:label="@string/title_activity_console_sony" />
     </application>
 
 </manifest>

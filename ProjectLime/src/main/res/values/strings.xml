@@ -1,10 +1,17 @@
 <resources>
+
     <string name="app_name">ProjectLime</string>
     <string name="title_activity_main3">Pagina Principale</string>
     <string name="title_activity_qrcode">QR Code Scan</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_console_brand">Console Brand</string>
     <string name="title_activity_console_microsoft">Microsoft Console</string>
+    <string name="title_activity_console_sony">Sony Console</string>
+    <string name="title_activity_console_nintendo">Nintendo Console</string>
+    <string name="title_activity_console_sega">SEGA Console</string>
+    <string name="title_activity_console_atari">Atary Console</string>
+
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

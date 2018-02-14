@@ -7,11 +7,11 @@ import android.view.View;
 import android.widget.ImageView;
 
 
-public class BrandConsole extends AppCompatActivity {
+public class BrandConsoleActivity extends AppCompatActivity {
 
     View.OnClickListener getImageBtnOnClick = new View.OnClickListener() {
         public void onClick(View view) {
-            Intent ac = new Intent(getApplicationContext(), console_microsoft_activity.class);
+            Intent ac = new Intent(getApplicationContext(), ConsoleMicrosoftActivity.class);
             startActivity(ac);
 
         }
