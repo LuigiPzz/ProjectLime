@@ -5,6 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_gamepad"
+            android:icon="@drawable/ic_menu_videogame_asset"
+            android:title="Console Brand" />
+        <item
             android:id="@+id/nav_qrtools"
             android:icon="@drawable/ic_menu_qrtools"
             android:title="QR Tools" />

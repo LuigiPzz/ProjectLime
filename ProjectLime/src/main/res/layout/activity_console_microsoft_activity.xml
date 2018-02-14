@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    tools:context="com.example.appdiprova.BrandConsole">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/logoxbox"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#CCCCCC"
+                    android:contentDescription="@string/logoxbox1"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="1dp"
+                    android:src="@drawable/logo_microsoft_xbox1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Space
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/logoxbox360"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#CCCCCC"
+                    android:contentDescription="@string/logoxbox360"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="1dp"
+                    android:src="@drawable/logo_microsoft_xbox360"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/logoxboxOne"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#CCCCCC"
+                    android:contentDescription="@string/logoxboxOne"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="1dp"
+                    android:src="@drawable/logo_microsoft_xboxone"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--
+                <Space
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/logoxbox4"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#CCCCCC"
+                    android:contentDescription="@string/logoxbox1"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="1dp"
+                    android:src="@drawable/logo_microsoft_xbox1"
+                    app:layout_constraintTop_toTopOf="parent" />
+                 -->
+            </TableRow>
+
+
+
+        </TableLayout>
+
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

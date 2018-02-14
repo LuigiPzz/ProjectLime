@@ -84,7 +84,8 @@ public class PrimaActivity extends AppCompatActivity
             Intent ac = new Intent(getApplicationContext(), QRcodeActivity.class);
             startActivity(ac);
         } else if (id == R.id.nav_gallery) {
-
+            Intent ac = new Intent(getApplicationContext(), console_microsoft_activity.class);
+            startActivity(ac);
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_settings) {
@@ -93,9 +94,11 @@ public class PrimaActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_backup) {
+
+        } else if (id == R.id.nav_gamepad) {
             Intent ac = new Intent(getApplicationContext(), BrandConsole.class);
             startActivity(ac);
-        }
+     }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -31,11 +31,12 @@
         <activity android:name=".ConsoleActivity" />
         <activity
             android:name=".QRcodeActivity"
-            android:label="@string/title_activity_qrcode"></activity>
+            android:label="@string/title_activity_qrcode" />
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
-        <activity android:name=".BrandConsole"></activity>
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".BrandConsole" />
+        <activity android:name=".console_microsoft_activity"></activity>
     </application>
 
 </manifest>

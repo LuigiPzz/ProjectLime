@@ -11,10 +11,13 @@
     <string name="accedi">Accedi</string>
 
 
-
     <string name="logosony">LogoSony</string>
     <string name="logomicrosoft">LogoMicrosoft</string>
     <string name="logonintendo">LogoNintendo</string>
     <string name="logosega">LogoSega</string>
     <string name="logoatari">LogoAtari</string>
+
+    <string name="logoxbox1">LogoXbox1</string>
+    <string name="logoxbox360">LogoXbox360</string>
+    <string name="logoxboxOne">LogoXboxOne</string>
 </resources>
