@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.projectLime.com.app.projectLime.Main2Activity">
+    tools:context="com.app.projectLime.Main2Activity">
 
     <Button
         android:id="@+id/bt_console"
