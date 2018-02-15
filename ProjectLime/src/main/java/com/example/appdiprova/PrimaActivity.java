@@ -99,7 +99,6 @@ public class PrimaActivity extends AppCompatActivity
             Intent ac = new Intent(getApplicationContext(), BrandConsoleActivity.class);
             startActivity(ac);
      }
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
