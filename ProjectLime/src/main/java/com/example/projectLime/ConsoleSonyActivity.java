@@ -1,13 +1,13 @@
-package com.example.appdiprova;
+package com.app.projectLime;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ConsoleMicrosoftActivity extends AppCompatActivity {
+public class ConsoleSonyActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_console_microsoft);
+        setContentView(R.layout.activity_console_sony);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.appdiprova;
+package com.app.projectLime;
 
 import android.content.Intent;
 import android.os.Bundle;

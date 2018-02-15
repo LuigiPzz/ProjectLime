@@ -1,4 +1,4 @@
-package com.example.appdiprova;
+package com.app.projectLime;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

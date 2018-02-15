@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:paddingLeft="40dp"
     android:paddingRight="40dp"
-    tools:context="com.example.appdiprova.ConsoleActivity">
+    tools:context="com.app.projectLime.com.app.projectLime.ConsoleActivity">
 
 
     <ListView

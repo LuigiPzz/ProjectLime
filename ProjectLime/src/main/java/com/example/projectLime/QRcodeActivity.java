@@ -1,4 +1,4 @@
-package com.example.appdiprova;
+package com.app.projectLime;
 
 import android.Manifest;
 import android.content.Context;
@@ -9,19 +9,18 @@ import android.os.Vibrator;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
+
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
-import java.util.function.BinaryOperator;
 
 public class QRcodeActivity extends AppCompatActivity {
 

@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
 
-    tools:context="com.example.appdiprova.BrandConsoleActivity">
+    tools:context="com.app.projectLime.com.app.projectLime.BrandConsoleActivity">
 
 
     <ScrollView
