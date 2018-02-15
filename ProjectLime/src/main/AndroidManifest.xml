@@ -23,12 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.app.projectLime.Main2Activity" />
         <activity
             android:name="com.app.projectLime.PrimaActivity"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.app.projectLime.ConsoleActivity" />
         <activity
             android:name="com.app.projectLime.QRcodeActivity"
             android:label="@string/title_activity_qrcode" />
