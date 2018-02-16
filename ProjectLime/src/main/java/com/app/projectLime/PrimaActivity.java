@@ -92,7 +92,8 @@ public class PrimaActivity extends AppCompatActivity
             Intent ac = new Intent(getApplicationContext(), SettingsActivity.class);
             startActivity(ac);
         } else if (id == R.id.nav_share) {
-
+            Intent ac = new Intent(getApplicationContext(), TestDBActivity.class);
+            startActivity(ac);
         } else if (id == R.id.nav_backup) {
 
         } else if (id == R.id.nav_gamepad) {

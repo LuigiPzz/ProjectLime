@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.app.projectLime.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,24 +24,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.projectLime.PrimaActivity"
+            android:name=".PrimaActivity"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.app.projectLime.QRcodeActivity"
+            android:name=".QRcodeActivity"
             android:label="@string/title_activity_qrcode" />
         <activity
-            android:name="com.app.projectLime.SettingsActivity"
+            android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity
-            android:name="com.app.projectLime.BrandConsoleActivity"
+            android:name=".BrandConsoleActivity"
             android:label="@string/title_activity_console_brand" />
         <activity
-            android:name="com.app.projectLime.ConsoleMicrosoftActivity"
+            android:name=".ConsoleMicrosoftActivity"
             android:label="@string/title_activity_console_microsoft" />
         <activity
-            android:name="com.app.projectLime.ConsoleSonyActivity"
+            android:name=".ConsoleSonyActivity"
             android:label="@string/title_activity_console_sony" />
+        <activity android:name=".TestDBActivity"></activity>
     </application>
 
 </manifest>
