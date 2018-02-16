@@ -15,6 +15,7 @@ public class TestDBActivity extends AppCompatActivity {
     EditText editID, editName;
     Button bt_adddata;
     Button bt_viewall;
+    Button bt_update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +28,12 @@ public class TestDBActivity extends AppCompatActivity {
         editName = findViewById(R.id.editText_name);
         bt_adddata = findViewById(R.id.bt_adddata);
         bt_viewall = findViewById(R.id.bt_viewall);
+        bt_update = findViewById(R.id.bt_update);
+
 
         AddData();
         viewAll();
+        UpdateData();
     }
 
     public void AddData(){
@@ -76,6 +80,22 @@ public class TestDBActivity extends AppCompatActivity {
         );
     }
 
+    public void UpdateData(){
+        bt_update.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        boolean isUpdated = appDB.updateData(editID.getText().toString(),
+                                                                editName.getText().toString());
+                    if(isUpdated)
+                        Toast.makeText(TestDBActivity.this,"Data Updated",Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(TestDBActivity.this,"Data not Updated",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+    }
+
     public void showMessage(String title, String message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
@@ -83,4 +103,5 @@ public class TestDBActivity extends AppCompatActivity {
         builder.setMessage(message);
         builder.show();
     }
+
 }

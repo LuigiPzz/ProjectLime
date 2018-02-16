@@ -37,6 +37,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
      public boolean insertData(String name){
+        //create istance db
          SQLiteDatabase db = this.getWritableDatabase();
          ContentValues contentValues = new ContentValues();
          contentValues.put(COL_2,name);
@@ -51,5 +52,15 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor result = db.rawQuery("select * from " + TABLE_NAME, null);
         return result;
+    }
+
+    public boolean updateData (String id, String name){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_1,id);
+        contentValues.put(COL_2,name);
+        long result = db.update(TABLE_NAME,contentValues,"id = ?",new String[]{id});
+        return true;
+
     }
 }
