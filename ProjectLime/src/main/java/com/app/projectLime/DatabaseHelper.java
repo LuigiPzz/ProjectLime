@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /**
  * Created by luigi.pozzi on 15/02/2018.
- * Classe per l'interazione
+ * Classe per l'implementazione dei metodi INSERT, UPDATE, DELETE, VIEWALL
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper{
@@ -36,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-     public boolean insertData(String name){
+    public boolean insertData(String name){
         //create istance db
          SQLiteDatabase db = this.getWritableDatabase();
          ContentValues contentValues = new ContentValues();
@@ -45,13 +45,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
         if(result==-1) return false;
         else return true;
-
-    }
-
-    public Cursor getAllData(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor result = db.rawQuery("select * from " + TABLE_NAME, null);
-        return result;
     }
 
     public boolean updateData (String id, String name){
@@ -59,8 +52,18 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1,id);
         contentValues.put(COL_2,name);
-        long result = db.update(TABLE_NAME,contentValues,"id = ?",new String[]{id});
+        db.update(TABLE_NAME,contentValues,"id = ?",new String[]{id});
         return true;
+    }
 
+    public Integer deleteData (String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME,"ID = ?",new String[]{id});
+    }
+
+    public Cursor getAllData(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        //risultato query
+        return db.rawQuery("select * from " + TABLE_NAME, null);
     }
 }

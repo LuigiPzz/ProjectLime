@@ -16,6 +16,7 @@ public class TestDBActivity extends AppCompatActivity {
     Button bt_adddata;
     Button bt_viewall;
     Button bt_update;
+    Button bt_delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +30,12 @@ public class TestDBActivity extends AppCompatActivity {
         bt_adddata = findViewById(R.id.bt_adddata);
         bt_viewall = findViewById(R.id.bt_viewall);
         bt_update = findViewById(R.id.bt_update);
-
+        bt_delete = findViewById(R.id.bt_delete);
 
         AddData();
-        viewAll();
         UpdateData();
+        DeleteData();
+        viewAll();
     }
 
     public void AddData(){
@@ -55,31 +57,6 @@ public class TestDBActivity extends AppCompatActivity {
         );
     }
 
-    public void viewAll(){
-        bt_viewall.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                       Cursor result = appDB.getAllData();
-                       if(result.getCount() == 0){
-                           //show Error
-                           showMessage("ERROR","Nothing found");
-                           return;
-                       }
-
-                       StringBuffer buffer = new StringBuffer();
-                       while(result.moveToNext()){
-                           buffer.append("id :"+result.getString(0) + "\n");
-                           buffer.append("name :"+result.getString(1) + "\n\n");
-                       }
-
-                       //show all data
-                        showMessage("Date: ",buffer.toString());
-                    }
-                }
-        );
-    }
-
     public void UpdateData(){
         bt_update.setOnClickListener(
                 new View.OnClickListener() {
@@ -95,6 +72,48 @@ public class TestDBActivity extends AppCompatActivity {
                 }
         );
     }
+
+    public void DeleteData() {
+        bt_delete.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Integer deletedRows = appDB.deleteData(editID.getText().toString());
+                        if(deletedRows>0)
+                            Toast.makeText(TestDBActivity.this,"Data Deleted",Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(TestDBActivity.this,"Data not Deleted",Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        );
+    }
+
+    public void viewAll(){
+        bt_viewall.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Cursor result = appDB.getAllData();
+                        if(result.getCount() == 0){
+                            //show Error
+                            showMessage("ERROR","Nothing found");
+                            return;
+                        }
+
+                        StringBuffer buffer = new StringBuffer();
+                        while(result.moveToNext()){
+                            buffer.append("id :"+result.getString(0) + "\n");
+                            buffer.append("name :"+result.getString(1) + "\n\n");
+                        }
+
+                        //show all data
+                        showMessage("Date: ",buffer.toString());
+                    }
+                }
+        );
+    }
+
 
     public void showMessage(String title, String message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
