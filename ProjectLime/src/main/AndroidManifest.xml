@@ -42,7 +42,10 @@
         <activity
             android:name=".ConsoleSonyActivity"
             android:label="@string/title_activity_console_sony" />
-        <activity android:name=".TestDBActivity"></activity>
+        <activity android:name=".TestDBActivity" />
+        <activity
+            android:name=".RatingActivity"
+            android:label="@string/title_activity_rating"/>
     </application>
 
 </manifest>

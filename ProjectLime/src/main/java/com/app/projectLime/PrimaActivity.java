@@ -91,16 +91,19 @@ public class PrimaActivity extends AppCompatActivity
         } else if (id == R.id.nav_settings) {
             Intent ac = new Intent(getApplicationContext(), SettingsActivity.class);
             startActivity(ac);
-        } else if (id == R.id.nav_share) {
-            Intent ac = new Intent(getApplicationContext(), TestDBActivity.class);
-            startActivity(ac);
         } else if (id == R.id.nav_backup) {
 
         } else if (id == R.id.nav_gamepad) {
             Intent ac = new Intent(getApplicationContext(), BrandConsoleActivity.class);
             startActivity(ac);
-     }
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+         } else if (id == R.id.nav_share) {
+            Intent ac = new Intent(getApplicationContext(), TestDBActivity.class);
+            startActivity(ac);
+         } else if (id == R.id.nav_rating) {
+            Intent ac = new Intent(getApplicationContext(), RatingActivity.class);
+            startActivity(ac);
+        }
+    DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

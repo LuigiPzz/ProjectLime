@@ -10,6 +10,7 @@
     <string name="title_activity_console_nintendo">Nintendo Console</string>
     <string name="title_activity_console_sega">SEGA Console</string>
     <string name="title_activity_console_atari">Atary Console</string>
+    <string name="title_activity_rating">Rating App</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -34,4 +35,5 @@
     <string name="logoplaystation4">LogoPlaystation4</string>
     <string name="logopsp">LogoPSP</string>
     <string name="logopsv">LogoPSV</string>
+    <string name="submitRateApp">Submit</string>
 </resources>
