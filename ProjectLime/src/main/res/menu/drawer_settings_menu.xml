@@ -7,41 +7,50 @@
         <item
             android:id="@+id/nav_gamepad"
             android:icon="@drawable/ic_menu_videogame_asset"
-            android:title="Console Brand" />
+            android:title="@string/console_brand" />
         <item
             android:id="@+id/nav_qrtools"
             android:icon="@drawable/ic_menu_qrtools"
-            android:title="QR Tools" />
+            android:title="@string/qr_tools" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="@string/gallery" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="@string/slideshow" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_settings"
-            android:title="Settings" />
-        <item
-            android:id="@+id/nav_backup"
-            android:icon="@drawable/ic_menu_backup"
-            android:title="Backup" />
+            android:title="@string/settings" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/share" />
             <item
                 android:id="@+id/nav_rating"
                 android:icon="@drawable/ic_menu_ratestar"
-                android:title="Rating App" />
+                android:title="@string/rating_app" />
 
         </menu>
     </item>
 
+    <item android:title="@string/account">
+        <menu>
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@drawable/ic_menu_person"
+                android:title="@string/login" />
+            <item
+                android:id="@+id/nav_backup"
+                android:icon="@drawable/ic_menu_backup"
+                android:title="@string/backup" />
+
+        </menu>
+    </item>
 </menu>
