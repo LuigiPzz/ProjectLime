@@ -53,7 +53,7 @@
             android:label="@string/title_activity_rating" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login"/>
     </application>
 
 </manifest>

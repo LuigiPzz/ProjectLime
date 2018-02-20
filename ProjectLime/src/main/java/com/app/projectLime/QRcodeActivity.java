@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -27,7 +28,6 @@ public class QRcodeActivity extends AppCompatActivity {
     private final static String NEEDED_PERMISSION = Manifest.permission.CAMERA;
 
     private static final int REQUEST_ID = 444;
-    private BarcodeDetector detector;
     private SurfaceView surfaceView;
     private CameraSource cameraSource;
     private TextView message;
@@ -36,11 +36,11 @@ public class QRcodeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrcode);
-        surfaceView = (SurfaceView) findViewById(R.id.surface_view);
+        surfaceView = findViewById(R.id.surface_view);
         message = findViewById(R.id.barcode_text);
 
         // chiediamo di individuare QR code e EAN 13
-        detector = new BarcodeDetector.Builder(getApplicationContext())
+        BarcodeDetector detector = new BarcodeDetector.Builder(getApplicationContext())
                 .setBarcodeFormats(Barcode.QR_CODE | Barcode.EAN_13 | Barcode.EAN_8)
                 .build();
 
@@ -92,7 +92,6 @@ public class QRcodeActivity extends AppCompatActivity {
                             message.setText(barcode);
                             assert vib != null; //test
                             vib.vibrate(100);
-                            return;
                         }
                     });
                 }
@@ -119,7 +118,7 @@ public class QRcodeActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
         switch (requestCode) {
             case REQUEST_ID: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {

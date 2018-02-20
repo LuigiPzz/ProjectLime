@@ -43,8 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
          contentValues.put(COL_2,name);
          long result = db.insert(TABLE_NAME,null,contentValues);
 
-        if(result==-1) return false;
-        else return true;
+        return result != -1;
     }
 
     public boolean updateData (String id, String name){
