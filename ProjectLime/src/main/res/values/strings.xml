@@ -61,5 +61,7 @@
     <string name="accedi">Accedi</string>
     <string name="submitRateApp">Submit</string>
 
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
 
 </resources>

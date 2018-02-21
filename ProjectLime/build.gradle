@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.app.projecLime"
+        applicationId 'com.app.projectLime'
         minSdkVersion 24
         targetSdkVersion 27
         versionCode 1
@@ -17,6 +17,8 @@ android {
         }
     }
     buildToolsVersion '26.0.2'
+    productFlavors {
+    }
 }
 
 dependencies {
@@ -28,7 +30,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-
     //serve per richiedere a google il permesso di alcuni servi es: QR
     compile 'com.google.android.gms:play-services:11.8.0'
+    compile 'com.google.android.gms:play-services-auth:11.8.0'
 }
+apply plugin: 'com.google.gms.google-services'

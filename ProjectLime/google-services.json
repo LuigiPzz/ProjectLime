@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "560108008883",
+    "firebase_url": "https://projectlime-game.firebaseio.com",
+    "project_id": "projectlime-game",
+    "storage_bucket": "projectlime-game.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560108008883:android:9a108345de00e51e",
+        "android_client_info": {
+          "package_name": "com.app.projectLime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560108008883-j1e6cuhr9mjokmjqgh637pkojiqgu613.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "560108008883-r6t5q6jbu7agfu880o7e9tds1ksahc9u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.projectLime",
+            "certificate_hash": "bf31b3136b6440538ea0054f232b1454d9805c97"
+          }
+        },
+        {
+          "client_id": "560108008883-42unhbbfaok7ug4bp5hk49jtf31f03k8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5Z1d100qNzl7K8KanSNXa4KsMqX7gNrI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560108008883-j1e6cuhr9mjokmjqgh637pkojiqgu613.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
