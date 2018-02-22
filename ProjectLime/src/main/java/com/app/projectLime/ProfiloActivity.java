@@ -20,7 +20,7 @@ import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
-public class Main2Activity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
+public class ProfiloActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
 
 
     private ImageView photoImageView;
@@ -33,7 +33,7 @@ public class Main2Activity extends AppCompatActivity implements GoogleApiClient.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_profilo);
 
         photoImageView = findViewById(R.id.photoImageView);
         nameTextView = findViewById(R.id.nameTextView);
