@@ -18,8 +18,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
     private GoogleApiClient googleApiClient;
 
-    private SignInButton signInButton;
-
     public static final int SIGN_IN_CODE = 777;
 
     @Override
@@ -36,7 +34,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
-        signInButton = findViewById(R.id.signInButton);
+        SignInButton signInButton = findViewById(R.id.signInButton);
 
         signInButton.setSize(SignInButton.SIZE_WIDE);
 

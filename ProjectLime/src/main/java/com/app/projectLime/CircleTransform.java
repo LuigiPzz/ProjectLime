@@ -14,6 +14,8 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
  * Fonte: http://www.gadgetsaint.com/android/circular-images-glide-library-android/#.Wo6d_ufSLDc
  */
 
+
+//TODO: l'immagine ottenuta risulta tagliata ai bordi
 public class CircleTransform extends BitmapTransformation {
     public CircleTransform(Context context) {
         super(context);

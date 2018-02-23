@@ -14,9 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 public class PrimaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,12 @@ public class PrimaActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        /*Glide.with(this)
+                .load(account.getPhotoUrl()) // add your image url
+                .transform(new CircleTransform(this)) // applying the image transformer
+                .into(imageView);*/
+
     }
 
     @Override
@@ -58,6 +69,20 @@ public class PrimaActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.float_settings_menu, menu);
+
+        TextView usr = findViewById(R.id.username);
+        TextView email = findViewById(R.id.email);
+        ImageView photourl = findViewById(R.id.photourl);
+
+         if (((MyApplication) this.getApplication()).getUsername() != null) {
+
+             usr.setText(((MyApplication) this.getApplication()).getUsername());
+             email.setText(((MyApplication) this.getApplication()).getEmail());
+             Glide.with(this)
+                .load(((MyApplication) this.getApplication()).getPhotoUrl())
+                .transform(new CircleTransform(this))
+                .into(photourl);
+        }
         return true;
     }
 
@@ -112,4 +137,5 @@ public class PrimaActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

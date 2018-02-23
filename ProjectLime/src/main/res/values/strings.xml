@@ -70,6 +70,9 @@
     <string name="not_revoke">not_revoke</string>
     <string name="not_close_session">not_close_session</string>
     <string name="proflie">proflie</string>
+    <string name="android_studio">Android Studio</string>
+    <string name="immagineprofilomenu">ImmagineProfiloMenu</string>
+    <string name="android_studio_android_com">android.studio@android.com</string>
 
 
 </resources>

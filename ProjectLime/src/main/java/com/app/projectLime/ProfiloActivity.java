@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +29,7 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
     private TextView emailTextView;
     private TextView idTextView;
 
+
     private GoogleApiClient googleApiClient;
 
     @Override
@@ -40,6 +42,8 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
         emailTextView = findViewById(R.id.emailTextView);
         idTextView = findViewById(R.id.idTextView);
 
+
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -48,7 +52,20 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
                 .enableAutoManage(this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+
+        Button bt = findViewById(R.id.button2);
+        //registra la callback dell'evento del click (codice eseguito al click)
+        bt.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        Intent ac = new Intent(getApplicationContext(), PrimaActivity.class);
+                        startActivity(ac);
+                    }
+                }
+        );
     }
+
 
     @Override
     protected void onStart() {
@@ -73,11 +90,15 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
 
             GoogleSignInAccount account = result.getSignInAccount();
 
+
+            assert account != null;
             nameTextView.setText(account.getDisplayName());
+            ((MyApplication) this.getApplication()).setUsername(account.getDisplayName());
             emailTextView.setText(account.getEmail());
+            ((MyApplication) this.getApplication()).setEmail(account.getEmail());
             idTextView.setText(account.getId());
 
-            //Glide.with(this).load(account.getPhotoUrl()).into(photoImageView);
+            ((MyApplication) this.getApplication()).setPhotoUrl(account.getPhotoUrl());
 
             Glide.with(this)
                     .load(account.getPhotoUrl()) // add your image url
@@ -125,4 +146,6 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+
+
 }
