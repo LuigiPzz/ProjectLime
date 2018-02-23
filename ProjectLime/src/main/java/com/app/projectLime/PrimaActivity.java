@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Objects;
+
 public class PrimaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -78,10 +80,18 @@ public class PrimaActivity extends AppCompatActivity
 
              usr.setText(((MyApplication) this.getApplication()).getUsername());
              email.setText(((MyApplication) this.getApplication()).getEmail());
-             Glide.with(this)
-                .load(((MyApplication) this.getApplication()).getPhotoUrl())
-                .transform(new CircleTransform(this))
-                .into(photourl);
+
+
+             if(Objects.equals(usr.getText().toString(), getString(R.string.android_studio))){
+                 Glide.with(this)
+                         .load(((MyApplication) this.getApplication()).getImage())
+                         .into(photourl);
+             } else {
+                 Glide.with(this)
+                         .load(((MyApplication) this.getApplication()).getPhotoUrl())
+                         .transform(new CircleTransform(this))
+                         .into(photourl);
+             }
         }
         return true;
     }

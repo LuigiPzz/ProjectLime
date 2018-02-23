@@ -73,6 +73,7 @@
     <string name="android_studio">Android Studio</string>
     <string name="immagineprofilomenu">ImmagineProfiloMenu</string>
     <string name="android_studio_android_com">android.studio@android.com</string>
+    <string name="button">Button</string>
 
 
 </resources>

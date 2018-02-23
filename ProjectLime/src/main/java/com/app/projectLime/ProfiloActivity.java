@@ -122,10 +122,12 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
             public void onResult(@NonNull Status status) {
                 if (status.isSuccess()) {
                     goLogInScreen();
+                    deleteUserInformation();
                 } else {
                     Toast.makeText(getApplicationContext(), R.string.not_close_session, Toast.LENGTH_SHORT).show();
                 }
             }
+
         });
     }
 
@@ -147,5 +149,10 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
 
     }
 
+    public void deleteUserInformation(){
 
+        ((MyApplication) this.getApplication()).setUsername(getString(R.string.android_studio));
+        ((MyApplication) this.getApplication()).setEmail(getString(R.string.android_studio_android_com));
+        ((MyApplication) this.getApplication()).setImage(R.mipmap.ic_launcher_round); //TODO SBAGLIATA ASSEGNAZIONE IMMAGINE
+    }
 }
